@@ -1,0 +1,102 @@
+FRAMEWORK VS LIBRERÍA
+
+Framework: Será la base sobre la cual podras construir y 
+    desarrollar tu proyecto, incluye todas las herramientas 
+    necesarias para completarlo (incluye librerías, estándares 
+    y reglas).
+
+Librería: Solo aborda una utilidad especifica, pudiendo agregar 
+    más de una en tu proyecto. Eso si, asegurate que no interfieran 
+    con el código de otra librería.
+
+La unión entre el Frontend y el Backend se hace a través de una API:    Application Programming Interface.
+
+Una API es una sección del backend que permite que el frontend pueda comunicarse con él a través de mensajes bidireccionales (de ida y vuelta).
+
+Tenemos dos grandes estándares para crear las APIs:
+
+SOAP (Simple Objetct Access Protocol): Mueve la información a través de un lenguaje XML (Extensible Markup Language). Es similar al HTML, es un lenguaje demarcado. SOAP es un protocolo que ha quedado en el olvido.
+
+<?xml version="1.0?>
+<note>
+    <to>Gaston</to>
+    <from>Gas</from>
+    <heading>Recordatorio</heading>
+    <body>Saca la basura!</body>
+</note>
+
+Rest (Representational State Transfer): Utiliza otro lenguaje JSON (Javascript Objet Notation). Un JSON no es más que un diccionario de Python. Los diccionarios de Python son lo mismo que los objetos de JS.
+JSON.jpg
+
+{
+    "firstName": Gaston,
+    "lastName": Martin,
+    "isAlive": true,
+    "addres":{
+        "streetAddress": "Cabrera 642",
+        "city": "Rio Cuarto"
+    },
+    "photneNumbers": [
+        "type": "home",
+        "number": "123"
+    ]
+}
+
+Términos hablados en la clase:
+
+API —> Application Programming Interface
+SOAP —> Simple Object Access Protocol
+REST —> Representational State Transfer
+XML —> Extensible Markup Language
+JSON —> JavaScript Object Notation
+
+HTTP
+Hypertext Transfer Protocol
+Request
+Cabezeras: piezas de informacion (Host, Accept-Language)
+Metodos: GET, POST, PUT, DELETE
+Responce
+body: JSON o diccionarios
+Header: Status Code, Server: aplicativo que permite distribuir, Date, Etag: hast, cahe, Accept-Rnages: como entregamos la info, Content-Length, Content-Type
+
+
+HTTP nos permite transportar la información que viene de distintas formas: HTML, CSS,JS, webAPIs.
+En la capa capa inferior se vale de protocolos como
+IP: para identificar y comunicarse con el servidor
+TCP, UDP: para la forma de envió de la información
+TLS: hace la encriptación de la información
+DNS: resuelve los nombres de dominio a direcciones IP.
+
+TCP - Son las siglas de Transmission Control Protocol, es un conjunto de reglas estandarizadas que permiten a los equipos comunicarse en una red como Internet.
+**TLS **- Transport Layer Security, seguridad de la capa de transporte es el protocolo sucesor de SSL. Son protocolos criptográficos, que proporcionan comunicaciones seguras por una red, comúnmente Internet.​
+**DNS **- El sistema de nombres de dominio (DNS) es el directorio telefónico de Internet. Las personas acceden a la información en línea a través de nombres de dominio
+**UDP **- El Protocolo de datagrama de usuario (UDP) es un protocolo ligero de transporte de datos que funciona sobre IP. UDP proporciona un mecanismo para detectar datos corruptos en paquetes, pero no intenta resolver otros problemas que surgen con paquetes, como cuando se pierden o llegan fuera de orden.
+
+Códigos de estado de respuesta HTTP:
+Respuestas informativas (100–199),
+Respuestas satisfactorias (200–299),
+Redirecciones (300–399),
+Errores de los clientes (400–499),
+y errores de los servidores (500–599).
+100s: Códigos informativos que indican que la solicitud iniciada por el navegador continúa.
+200s: Los códigos con éxito regresaron cuando la solicitud del navegador fue recibida, entendida y procesada por el servidor.
+300s: Códigos de redireccionamiento devueltos cuando un nuevo recurso ha sido sustituido por el recurso solicitado.
+400s: Códigos de error del cliente que indican que hubo un problema con la solicitud.
+500s: Códigos de error del servidor que indican que la solicitud fue aceptada, pero que un error en el servidor impidió que se cumpliera.
+
+
+¿Cómo es el flujo de desarrollo de una aplicación web?
+Entorno local (Editor de Código → Git → mi local) Pasar del entorno local al servidor se llama deploy.
+
+Normalmente se hace un push a un repositorio remoto (Github), el cual es un servidor que solo contiene el código de tu proyecto.
+
+Cada vez que uno trae código de Github a un entorno local es un pull.
+
+Lo que se hace normalmente en un entorno profesional es CI/CD (Continuous Integration and Continuous Delivery) o Continous Deployment. Se prueba (testea), si funciona bien, el código se va a al server (production).
+
+El proyecto se guarda en production en un domain (dominio).
+Se puede comprar un dominio, por ejemplo en namecheap.
+En mi computadora, las cosas van a vivir en un entorno local:
+Dirección y puerto, por ejemplo: 
+    127.0.0.1 : 8000
+        IP      Port
