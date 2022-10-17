@@ -1,4 +1,4 @@
-FRAMEWORK VS LIBRERÍA
+FRAMEWORK VS LIBRERÍA
 
 Framework: Será la base sobre la cual podras construir y 
     desarrollar tu proyecto, incluye todas las herramientas 
@@ -100,3 +100,110 @@ En mi computadora, las cosas van a vivir en un entorno local:
 Dirección y puerto, por ejemplo: 
     127.0.0.1 : 8000
         IP      Port
+
+
+
+Curso de manejo de terminal
+¿Qué es la terminal?
+
+La terminal es una herramienta indispensable que cualquier persona en la tecnología debe conocer 👀. Es importante porque:
+Te da flexibilidad 📏. Con unos pocos comandos, puedes hacer mucho.
+Es mucho más veloz que una interfaz 💻.
+Es tu única opción si no hay interfaz 😆, como para configurar un servidor remoto.
+Puedes invocar demonios 👿. Hay que tener cuidado con los comandos.
+Específicamente, la terminal es una interfaz gráfica muy sencilla que simula una línea de comandos:
+Terminal: Ventana que muestra el promt.
+Shell (línea de comandos): Programa que ejecuta los comandos. Hay varios tipos de shell, pero sirven para lo mismo. La más comunes son bash shell o Z shell. En este curso, usaremos la primera 🍎.
+Es importante comenzar a usar Linux 😟.
+Un comando es un programa que se puede ejecutar desde la terminal.
+
+Notas 😄
+Aprendiendo a caminar en la terminal.
+
+El sistema de archivos 📁 inicia en un slash / y desciende a otras carpetas. De todas las carpetas, nos interesa home ya que dentro se encuentran las carpetas de cada usuario, donde están todos los documentos.
+Cuando entramos, la terminal nos coloca en ~, que es donde están nuestros documentos /home/usuario.
+cd Para acceder una carpeta, usa cd <carpeta>, para regresar a la carpeta anterior cd ... Para regresar a home, solo haz cd.
+clear Para limpiar la pantalla, o bien, el comando ctrl+l.
+En cada comando, hay varias especificaciones que podemos poner, después de -.
+ls para listar archivos. Agrega -l o -lh para agregar detalles.
+pwd print working directory 🖨️.
+file <archivo> sirve para describir un tipo de archivo y sus características 🥴.
+
+Como usualmente vamos y volvemos de diferentes directorios, pueden usar los comandos pushd y popd para hacerlo más fácil.
+
+El comando pushd mueve al nuevo directorio y guarda el actual en la pila.
+
+El comando popd saca un directorio de la pila y te lleva allá.
+
+Mostrar información del directorio:
+ls :Lista el contenido de los directorios (por defecto ordena la salida alfabéticamente).
+
+Alguna de sus opciones (argumentos) más útiles son:
+
+-a :todos los archivos, incluso los que comienzan con punto (.).
+
+-A :Lista todos los ficheros en los directorios, excepto los que comienzan con punto . (.) y los que comienzan con doble punto (…).
+
+-F :indica tipo: / directorio, * ejecutable, @ enlace simbólico.
+
+-h :indicará el tamaño en KB, MB, etc.
+
+-l :listado en formato largo (o detallado).
+
+-S :clasifica los contenidos de los directorios por tamaños, con los ficheros más grandes en primer lugar.
+
+-r :invierte el orden de la salida.
+
+-R :Lista recursivamente los subdirectorios encontrados.
+
+-t :ordenar por fecha de última modificación.
+
+-u :ordenar por fecha de último acceso.
+
+-x :presenta los ficheros por columnas.
+
+-i :precede la salida con el número de i-node
+
+ejemplos:
+ls -lt :muestra los archivos del mas actual al mas antiguo
+
+ls -ltr :muestra los archivos del mas antiguo al mas actual
+
+ls -lh :muestra de forma mas legible el tamaño de los archivos
+
+ls -lhS :muestra de forma ordenada los archivos por su tamaño
+
+ls -la :muestra los atributos de los archivos y los archivos ocultos
+
+Explorando el contenido de nuestro archivos.
+
+Podemos explorar el contenido de archivos sin la necesidad de abrirlos, desde la terminal 🧐. Esto para archivos de texto.
+head <documento de texto>: Nos muestra las primeras 10 líneas de un archivo de texto. Para especificar el número de líneas head -n <numero de lineas> <archivo>
+tail <documento>: Nos muestra las últimas 10 líneas.
+less <archivo>: Este es muy cool, es muy interactivo, nos permite hacer scroll, y nos permite hacer búsquedas haciendo /<palabra a buscar>. Para salir presionamos q 🔍.
+xdg-open <archivo>: Para abrir un archivo desde la terminal. Usa las aplicaciones predeterminadas. Esto para linux, para mac, es open. Esto crea un proceso en la terminal que no nos dejará hacer nada mas. Para terminar el proceso ctrl+c.
+nautilus nos permite abrir el explorador de archivos en una posición dada (en linux) 📁.
+
+
+
+Un comando puede ser 4 cosas:
+
+Un programa ejecutable: que se compilo en algun lenguaje de programación y se puede ejecutar
+
+Un comando de utilidad de la shell.
+
+Una función de shell
+
+Un alias
+
+Comandos
+
+type nos permite saber que clase es un comando. Por ejemplo type cd (es una funcion de shell), ls (es un alias)
+
+Para crear un alias: alias ‘nombreDelAlias’ = ‘comandoQueInvoca’. Por ejemploalias l=”ls -lh”. Temporales, por el momento.
+
+Con –help o help, puedes tener una ayuda sobre los comandos.
+
+man ‘comando’ : hace referencia al manual de usuario de un comando, otro similar es informático
+
+whatis ‘comando’ : nos da una descripcion muy corta de que hace ese comando. Pero no funciona con todos.
