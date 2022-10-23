@@ -1,0 +1,102 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red236\green241\blue246;
+\red235\green240\blue246;\red15\green23\blue46;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c93959\c95533\c97259;
+\cssrgb\c93725\c95294\c97255;\cssrgb\c7059\c12157\c23922;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Curso de Git\
+\
+\pard\pardeftab720\sa420\partightenfactor0
+
+\fs36 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Git reset y git rm son comandos con utilidades muy diferentes, pero se pueden confundir muy f\'e1cilmente.\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\b \cf2 \cb3 \strokec4 git rm\
+\pard\pardeftab720\sa420\partightenfactor0
+
+\f0\b0 \cf2 \cb3 \strokec4 Este comando nos ayuda a eliminar archivos de Git sin eliminar su historial del sistema de versiones. Esto quiere decir que si necesitamos recuperar el archivo solo debemos \'93viajar en el tiempo\'94 y recuperar el \'faltimo commit antes de borrar el archivo en cuesti\'f3n.\
+Recuerda que\'a0
+\f2 \cb3 \strokec4 git rm
+\f0 \cb3 \strokec4 \'a0no puede usarse as\'ed nom\'e1s. Debemos usar uno de los flags para indicarle a Git c\'f3mo eliminar los archivos que ya no necesitamos en la \'faltima versi\'f3n del proyecto:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 git rm --cached
+\f0 \cb3 \strokec4 : Elimina los archivos de nuestro repositorio local y del \'e1rea de staging, pero los mantiene en nuestro disco duro. B\'e1sicamente le dice a Git que deje de trackear el historial de cambios de estos archivos, por lo que pasaran a un estado\'a0
+\f2 \cb3 \strokec4 untracked
+\f0 \cb3 \strokec4 .\
+\ls1\ilvl0
+\f2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 git rm --force
+\f0 \cb3 \strokec4 : Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos m\'e1s avanzados).\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\b \cf2 \cb3 \strokec4 git reset\
+\pard\pardeftab720\sa420\partightenfactor0
+
+\f0\b0 \cf2 \cb3 \strokec4 Este comando nos ayuda a volver en el tiempo. Pero no como\'a0
+\f2 \cb3 \strokec4 git checkout
+\f0 \cb3 \strokec4 \'a0que nos deja ir, mirar, pasear y volver. Con\'a0
+\f2 \cb3 \strokec4 git reset
+\f0 \cb3 \strokec4 \'a0volvemos al pasado sin la posibilidad de volver al futuro. Borramos la historia y la debemos sobreescribir. No hay vuelta atr\'e1s.\
+Este comando es\'a0
+\f1\b \cb3 \strokec4 muy peligroso
+\f0\b0 \cb3 \strokec4 \'a0y debemos emplearlo solo en caso de emergencia. Recuerda que debemos usar alguna de estas dos opciones:\
+Hay dos formas de utilizar\'a0
+\f2 \cb3 \strokec4 git reset
+\f0 \cb3 \strokec4 : con el argumento\'a0
+\f2 \cb3 \strokec4 --hard
+\f0 \cb3 \strokec4 , borrando toda la informaci\'f3n que tengamos en el \'e1rea de staging (y perdiendo todo para siempre). O, un poco m\'e1s seguro, con el argumento\'a0
+\f2 \cb3 \strokec4 --soft
+\f0 \cb3 \strokec4 , que mantiene all\'ed los archivos del \'e1rea de staging para que podamos aplicar nuestros \'faltimos cambios pero desde un commit anterior.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 git reset --soft
+\f0 \cb3 \strokec4 : Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, as\'ed podemos aplicar las \'faltimas actualizaciones a un nuevo commit.\
+\ls2\ilvl0
+\f2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 git reset --hard
+\f0 \cb3 \strokec4 : Borra todo. Todo todito, absolutamente todo. Toda la informaci\'f3n de los commits y del \'e1rea de staging se borra del historial.\
+\pard\pardeftab720\sa420\partightenfactor0
+
+\f1\b \cf2 \cb3 \strokec4 \'a1Pero todav\'eda falta algo!
+\f0\b0 \cb3 \strokec4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f2 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 git reset HEAD
+\f0 \cb3 \strokec4 : Este es el comando para sacar archivos del \'e1rea de staging. No para borrarlos ni nada de eso, solo para que los \'faltimos cambios de estos archivos no se env\'eden al \'faltimo commit, a menos que cambiemos de opini\'f3n y los incluyamos de nuevo en staging con\'a0
+\f2 \cb3 \strokec4 git add
+\f0 \cb3 \strokec4 , por supuesto.\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\b \cf2 \cb3 \strokec4 La relevancia de estos comandos\
+\pard\pardeftab720\sa420\partightenfactor0
+
+\f0\b0 \cf2 \cb3 \strokec4 Imagina el siguiente caso:\
+Hacemos cambios en los archivos de un proyecto para una nueva actualizaci\'f3n. Todos los archivos con cambios se mueven al \'e1rea de staging con el comando\'a0
+\f2 \cb3 \strokec4 git add
+\f0 \cb3 \strokec4 . Pero te das cuenta de que uno de esos archivos no est\'e1 listo todav\'eda. Actualizaste el archivo, pero ese cambio no debe ir en el pr\'f3ximo commit por ahora.\
+\'bfQu\'e9 podemos hacer?\
+Bueno, todos los cambios est\'e1n en el \'e1rea de Staging, incluido el archivo con los cambios que no est\'e1n listos. Esto significa que debemos sacar ese archivo de Staging para poder hacer commit de todos los dem\'e1s.\
+\'a1Al usar\'a0
+\f2 \cb3 \strokec4 git rm
+\f0 \cb3 \strokec4 \'a0lo que haremos ser\'e1 eliminar este archivo completamente de git! Todav\'eda tendremos el historial de cambios de este archivo, con la eliminaci\'f3n del archivo como su \'faltima actualizaci\'f3n. Recuerda que en este caso no busc\'e1bamos eliminar un archivo, solo dejarlo como estaba y actualizarlo despu\'e9s, no en este commit.\
+En cambio, si usamos\'a0
+\f2 \cb3 \strokec4 git reset HEAD
+\f0 \cb3 \strokec4 , lo \'fanico que haremos ser\'e1 mover estos cambios de Staging a Unstaged. Seguiremos teniendo los \'faltimos cambios del archivo, el repositorio mantendr\'e1 el archivo (no con sus \'faltimos cambios, pero s\'ed con los \'faltimos en los que hicimos commit) y no habremos perdido nada.\
+\pard\pardeftab720\sa420\partightenfactor0
+
+\f1\b \cf2 \cb3 \strokec4 Conclusi\'f3n
+\f0\b0 \cb3 \strokec4 : Lo mejor que puedes hacer para salvar tu puesto y evitar un incendio en tu trabajo es conocer muy bien la diferencia y los riesgos de todos los comandos de Git.\cf5 \cb6 \strokec5 \
+}
